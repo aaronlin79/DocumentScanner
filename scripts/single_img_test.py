@@ -53,9 +53,9 @@ def main():
     print(f"Saved: {out_vis}")
 
 
-    warped = warp_from_result(img, result)
+    warped = warp_from_result(thresh_img, result)
     if warped is not None:
-        cv2.imwrite(str(Path(args.outdir) / "warped_document.png"), warped)
+        cv2.imwrite(str(Path(args.outdir) / "scanned_doc.png"), warped)
 
 
 if __name__ == "__main__":

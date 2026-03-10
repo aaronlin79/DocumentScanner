@@ -6,6 +6,7 @@ import cv2
 from src.io_handling import imread_color, ensure_dir
 from src.detect_page import detect_page_corners
 from src.threshholding import thresh_document
+from src.transform import warp_from_result
 
 
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff", ".webp"}
@@ -55,9 +56,10 @@ def main():
                 scores.append(result.score)
 
                 thresh_img = thresh_document(img)
-                out_scan_path = str(Path(args.outdir) / "Multi_img_thresh" / f"{fp.stem}_thresh.png")
+                warped_img = warp_from_result(thresh_img, result)
+                out_scan_path = str(Path(args.outdir) / "Multi_scan" / f"{fp.stem}_scanned.png")
                 
-                cv2.imwrite(out_scan_path, thresh_img)
+                cv2.imwrite(out_scan_path, warped_img)
 
             else:
                 if args.save_failures:
