@@ -66,6 +66,8 @@ def main():
             result = detect_page_corners(img, debug_dir=debug_dir, max_dim=args.max_dim, use_clahe=args.clahe)
 
             success = result.corners is not None
+            fg_ratio = ""
+            num_cc = ""
                     
             if success:
                 ok += 1
