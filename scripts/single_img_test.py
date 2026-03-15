@@ -7,7 +7,7 @@ from src.io_handling import imread_color, ensure_dir
 from src.detect_page import detect_page_corners
 
 from src.transform import warp_from_result
-from src.threshholding import thresh_document
+from DocumentScanner.src.thresholding import thresh_document
 
 def main():
     ap = argparse.ArgumentParser()
