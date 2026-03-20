@@ -13,3 +13,11 @@ This project takes a photo of a document, detects the page boundary, corrects pe
 - Supports optional CLAHE preprocessing for difficult lighting conditions
 - Saves intermediate debugging artifacts such as grayscale, edges, closed edges, and detection overlays
 - Includes both single-image testing and batch evaluation scripts
+
+## Usage
+
+**Single Image Scan:**
+```
+python -m scripts.single_img_test --img documents/raw/base.jpg --outdir outputs/debug/single_img
+```
+Replace `base.jpg` with the filename of the image you want to process.
