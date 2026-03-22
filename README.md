@@ -27,3 +27,13 @@ Example:
 ```
 python -m scripts.single_img_test --img documents/raw/base.jpg --outdir outputs/debug/single_img
 ```
+
+### Batch Processing:
+```
+python -m scripts.multi_img_test --input <input-dir> --outdir <output-dir>
+```
+
+Example:
+```
+python -m scripts.multi_img_test --input documents/raw  --outdir outputs/debug/eval
+```
