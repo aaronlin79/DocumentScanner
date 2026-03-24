@@ -18,6 +18,9 @@ This project takes a photo of a document, detects the page boundary, corrects pe
 
 ## Usage
 
+### Uploading Images:
+Place your image anywhere in the project (recommended: `documents/raw/`)
+
 ### Single Image Scan:
 ```
 python -m scripts.single_img_test --img <image-path> --outdir <output-dir>
